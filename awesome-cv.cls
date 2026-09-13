@@ -92,6 +92,12 @@
 }
 % Solves issues Warning: File `cv.out' has changed
 \RequirePackage{bookmark}
+\RequirePackage[
+    backend=biber,
+    style=ieee,
+    maxbibnames=99,
+    giveninits=false
+]{biblatex}
 
 %-------------------------------------------------------------------------------
 %                Configuration for directory locations
@@ -159,6 +165,17 @@
     \ifbool{acvSectionColorHighlight}{{\color{awesome}#1#2#3}}{#1#2#3}%
 }
 
+% Bibliography
+% Bold selected author names
+\renewcommand*{\mkbibnamegiven}[1]{%
+  \ifitemannotation{highlight}
+    {\textbf{#1}}
+    {#1}}
+
+\renewcommand*{\mkbibnamefamily}[1]{%
+  \ifitemannotation{highlight}
+    {\textbf{#1}}
+    {#1}}
 
 %-------------------------------------------------------------------------------
 %                Configuration for fonts
@@ -402,6 +419,9 @@
     \def\@letterenclosure{#2}
 }
 
+\newcommand{\emojilink}[2]{%
+  \href{#1}{#2\,\footnotesize\faLink}%
+}
 
 %-------------------------------------------------------------------------------
 %                Commands for extra
@@ -748,7 +768,6 @@
     \end{justify}
     %\vspace{-1.5mm}
 }
-
 
 %-------------------------------------------------------------------------------
 %                Commands for elements of Cover Letter

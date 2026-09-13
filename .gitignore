@@ -1,30 +1,41 @@
-### TeX ###
-## Core latex/pdflatex auxiliary files:
+# Core LaTeX auxiliary files
 *.aux
-*.lof
-*.log
-*.lot
 *.fls
-*.out
+*.log
 *.toc
-*.fmt
-*.fot
-*.cb
-*.cb2
-.*.lb
-*.fdb_latexmk
-*.synctex
-*.synctex(busy)
+*.lof
+*.lot
+*.out
+
+# Biber / BibLaTeX specific files
+*.bbl
+*.bcf
+*.blg
+*-blx.bib
+*.run.xml
+
+# XeLaTeX / Fontconfig caches (if generated locally)
+*.xdv
+
+# Common package-specific auxiliary files
+*.xdv
 *.synctex.gz
-*.synctex.gz(busy)
+*.synctex(busy)
 *.pdfsync
-*.rubbercache
-rubber.cache
-
-## Intermediate documents:
-*.dvi
-*-converted-to.*
-
-##Ignore Transcript files
-transcripts.pdf
-transcripts.tex
+*.alg
+*.acr
+*.acn
+*.glg
+*.glo
+*.gls
+*.ist
+*.idx
+*.ind
+*.ilg
+*.idx
+*.maf
+*.mtc
+*.mtc0
+*.nav
+*.snm
+*.vrb
